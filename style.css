@@ -1,0 +1,277 @@
+body {
+    width: 1970; 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: rgb(87, 85, 85);
+}
+
+header {
+    background: hsla(204.7, 13.8%, 24.1%, 0.8);
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    border: 2px solid #00bfff;
+    border-radius: 4px;
+}
+
+.hero {
+    background: url('HERO.png');
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('hero-overlay.png') no-repeat center center/cover;
+    opacity: 0; /* Adjust opacity as needed */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+    color: white;
+}
+
+.hero-text {
+    color: white;
+    padding: 0px 5px 0px 5px;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 24px;
+    margin: 0;
+    line-height: 50px;
+}
+
+.special-text {
+    background-color: rgba(58, 68, 73, 0.5);
+    padding: 5px 10px 5px 10px;
+    color: white;
+}
+
+.services {
+    background: #00bfff;
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.s-text {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 32px;
+    font-weight: lighter;
+    font-size: 25px;
+    padding-left: 15px;
+}
+
+.s-text hr {
+    width: 52px;
+    border: 0.5px solid white;
+    margin: -16px 0;
+}
+
+.service {
+    max-width: 270px;
+    margin: 16px 0;
+    text-align: center;
+}
+
+.service .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 16px;
+}
+
+.service h2 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.service p {
+    font-size: 13px;
+    text-align: justify;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.portfolio {
+    background-color: white;
+    margin-top: -25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    margin-bottom: 32px;
+}
+
+.port-logo {
+    font-weight: lighter;
+    font-size: 25px;
+    padding-top: 80px;
+}
+
+.port-logo hr {
+    width: 52px;
+    border: 0.3px solid black;
+    margin: -20px 0;
+}
+
+.port-nav {
+    padding-top: 106px;
+    font-weight: bold;
+}
+
+.port-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.port-nav a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 16px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.port-nav a:hover {
+    border: 2px solid #00bfff;
+    border-radius: 4px;
+}
+
+.portfolio-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 106px;
+}
+
+.row .image-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 40px;
+}
+
+.row .image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.row .image-container::after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.row .image-container:hover::after {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: to create a semi-transparent background */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .row{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .port-nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+}
+
+footer {
+    background-color: #0d6994;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
