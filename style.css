@@ -3,15 +3,17 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #515f67;
     background-color: rgb(87, 85, 85);
 }
 
 header {
-    background: hsla(204.7, 13.8%, 24.1%, 0.8);
+    background: none;
     color: white;
     position: relative;
     z-index: 2;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 nav {
@@ -45,9 +47,16 @@ nav a:hover {
     border-radius: 4px;
 }
 
+.bg{
+    height: auto;
+    width: auto;
+    background: url('Images/HERO.jpg');
+    background-position: center;
+}
+
 .hero {
-    background: url('Images/HERO.png');
     height: 400px;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,15 +64,6 @@ nav a:hover {
     position: relative;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('Images/hero-overlay.png') no-repeat center center/cover;
-    opacity: 0; /* Adjust opacity as needed */
-}
 
 .hero-content {
     position: relative;
@@ -241,8 +241,269 @@ nav a:hover {
     align-items: center;
 }
 
-/* Responsive Design */
+.section {
+    height: auto;
+    margin: 0 auto;
+    width: auto;
+    justify-content: space-around;
+    display: flex;
+    padding-bottom: 40px;
+}
+
+.section1 {
+    float: left;
+    color: white;
+    margin-top: 40px;
+    width: 50%;
+}
+
+.sp-text {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 32px;
+    font-weight: lighter;
+    font-size: 21.5px;
+    padding-left: 15px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.s-button {
+    height: auto;
+    padding-top: 25px;
+    padding-left: 15px;
+    color: #353f46;
+}
+
+.s-button button {
+    height: 45px;
+    width: 140px;
+    background: none;
+    border: 2px solid #353f46;
+    font-size: 15px;
+    color: #353f46;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.s-button button:hover{
+    background-color: #00bfff;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 8px 16px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.section2 {
+    float: right;
+    padding-top: 80px;
+}
+
+.section2 iframe {
+    height: 315px;
+    width: 560px;
+}
+
+.twitter_main {
+    height: auto;
+    margin: 0 auto;
+    width: auto;
+    justify-content: space-around;
+    display: flex;
+    padding-bottom: 40px;
+    background-color: #00bfff;
+}
+
+.twitter {
+    margin-top: 40px;
+    float: left;
+    color: white;
+}
+
+.twit_logo {
+    float: right;
+    margin-top: 80px;
+}
+
+.whois{
+    height: auto;
+    background-image: url("Images/whois.jpg");
+    margin: 0 auto;
+    width: auto;
+    justify-content: space-around;
+    display: flex;
+    padding-bottom: 80px;
+    background-position: center;
+}
+
+.whois1 {
+    float: left;
+    color: white;
+    margin-top: 40px;
+    padding-left: 15px;
+}
+
+.spp-text{
+    text-align: left;
+    margin-bottom: 32px;
+    font-weight: lighter;
+    font-size: 17.5px;
+    font-family: 'Segoe UI', sans-serif;
+    padding-left: 15px;
+}
+
+.whois2 {
+    float: left;
+    color: white;
+    margin-top: 105px;
+    padding-left: 30px;
+}
+
+.sppp-text{
+    text-align: left;
+    margin-bottom: 32px;
+    font-weight: lighter;
+    font-size: 17.7px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.img-logos{
+    cursor: pointer;
+    display: flex;
+    gap: 40px;
+}
+
+.img-logos :hover{
+    border: 1px solid white;
+    transition: 0.3s;
+}
+
+.testimonial_main {
+    height: auto;
+    margin: 0 auto;
+    width: auto;
+    justify-content: space-around;
+    display: flex;
+    padding-bottom: 40px;
+    background-color: white;
+}
+
+.testimonial {
+    margin-top: 40px;
+    float: left;
+    color: black;
+}
+
+.testimonial_logo {
+    float: right;
+    margin-top: 80px;
+}
+.testimonial hr{
+    width: 52px;
+    border: 0.3px solid black;
+    margin: -20px 0;
+}
+
+.testimonial a{
+    color: #4bcaff;
+    text-decoration-line: none;
+}
+
+
+.contact{
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    background-image: url("Images/contact-bg.jpg");
+}
+
+.basics{
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.contact1{
+    height: auto;
+    float: left;
+    color: white;
+    width: 50%;
+}
+
+.sssss-text{
+    padding-left: 15px;
+    font-size: 25px;
+}
+
+.sssss-text hr {
+    width: 52px;
+    border: 0.5px solid white;
+    float: left;
+}
+
+.forms{
+    padding-top: 50px;
+    padding-left: 15px;
+}
+
+.forms label{
+    font-size: 20px;
+}
+
+.forms input {
+    border: 2px solid white;
+    height: 56px;
+    width: 466px;
+    background: none;
+    color: white;
+    font-size: 30px;
+}
+
+.forms textarea {
+    border: 2px solid white;
+    height: 220px;
+    width: 1150px;
+    background: none;
+    color: white;
+    font-size: 30px;
+}
+
+
+.contact2{
+    float: right;
+    color: white;
+    width: 50%;
+}
+.contact2 p{
+    color: white;
+    padding-top: 100px;
+    font-size: 17px;
+}
+
+.message{
+    color: white;
+}
+
+.forms button{
+    height: 60px ;
+    width: 370px;
+    background-color: #00bfff;
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+}
+
+
 @media (max-width: 768px) {
+    .bg{
+        height: auto;
+        width: auto;
+        background: url('Images/HERO1.jpg');
+        background-position: center;
+    }
+
     nav ul {
         flex-direction: column;
         gap: 8px;
@@ -250,6 +511,10 @@ nav a:hover {
 
     .row{
         flex-direction: column;
+        justify-content: center;
+    }
+
+    .body{
         justify-content: center;
     }
 
@@ -261,17 +526,115 @@ nav a:hover {
     .services {
         flex-direction: column;
     }
+    .service{
+        text-align: center;
+        padding-left: 40px;
+    }
+    .section{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .section iframe {
+        height: auto;
+        width: auto;
+    }
+
+    .whois{
+        justify-content: center;
+        flex-direction: column;
+        background-image: url("Images/whois1.jpg");
+    }
+
+    .img-logos{
+        gap: 20px;
+    }
+
+    .contact{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-image: url("Images/contact-bg1.jpg");
+    }
+
+    .sssss-text{
+        padding-left: 15px;
+        font-size: 20px;
+    }
+
+    .forms label{
+        font-size: 15px;
+    }
+
+    .contact1{
+        width: 50%;
+        float: left;
+    }
+    .contact2{
+        width: 50%;
+        float: right;
+    }
+
+    .forms input {
+        border: 2px solid white;
+        height: 40px;
+        width: 150px;
+        background: none;
+        color: white;
+        font-size: 15px;
+    }
+
+    .forms textarea {
+        border: 2px solid white;
+        height: 220px;
+        width: 300px;
+        background: none;
+        color: white;
+        font-size: 15px;
+    }
+
+    .message{
+        padding-top: 80px;
+    }
+    .forms{
+        padding-top: 110px;
+    }
+
+    .forms button{
+        height: 60px ;
+        width: 340px;
+        font-size: 20px;
+        color: white;
+        margin-top: 15px;
+    }
 }
 
 footer {
     background-color: #0d6994;
     color: white;
     text-align: center;
+    align-items: center;
     padding: 16px;
     position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.copyright a{
+    color: #4bcaff;
+    font-size: 20px;
 }
 
 footer p {
     margin: 0;
     font-size: 14px;
+}
+
+.footer_navs{
+    width: 50%;
+    float: left;
+}
+
+.copyright{
+    width: 50%;
+    float: right;
 }
